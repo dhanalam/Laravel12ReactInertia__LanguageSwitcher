@@ -1,0 +1,110 @@
+Leads:
+  - name:
+  - address:
+  - contact information
+  - email
+  - created_at
+  - flag information (urgent/ hiring intent / free leads)
+  - credit points
+  - verified phone no
+  - details in questions and answers
+  - rejecting reason
+  - created by admin
+
+Leads Location
+  - distance by zip
+  - distance by city
+  - distance by map longitude and latitude
+  - distance by country
+
+Leads Services
+  -
+
+User_Leads
+  - has_read
+
+
+Services:
+  - name
+  - nested
+
+Partner Profile
+  - name
+  - company name
+  - profile picture
+  - email
+  - phone_no
+  - website
+  - company_location
+  - address
+  - whatsapp_no
+  - About your company
+    1. Size
+    2. Duration of business activity
+    3. Describe about your business
+
+Partner Service Preferences
+  -
+
+Partner Services
+  - service
+  - type (online/on-field/remote)
+  - distance
+
+
+
+-------***************-----------
+ADMIN FUNCTIONALITY
+-------***************-----------
+1. Import / Export Leads
+2. Leads details
+    a. Leads Flag can be created dynamic and attached to lead as multiple
+      - name
+      - color
+      - icon
+    b.
+
+
+
+
+-------***************-----------
+PARTNER FUNCTIONALITY
+-------***************-----------
+
+Email Notification and Web Notification !!!!
+
+1. Lead open limit -- Set by Admin (Standard limit configurable)
+2. Time limitation for leads expiry or archived leads (Dynamically controllable by Admin - Standard 4 weeks ago)
+3. Admin can set standard limit viewer for a LEAD (But It can be updated while creating leads)
+4. Filters (On the basis of published_at time)
+  a) Showing:
+      - Read/Unread
+      - Viewer nth/5
+  b) Services Filters:
+      - Preferred ALL (By Default)
+        (All preferred services will be listed in checkbox without checked)
+      - Global ALL (To select all services)
+  b) Location Filters:
+      - Preferred ALL (By Default)
+        (All preferred location will be listed in checkbox without checked)
+      - Global ALL (To select all within partner country)
+
+
+
+
+
+
+When creating Partner in frontend form
+  - For now, we are giving Germany by default as country. We can give multiple countries option later on in second phase
+  - For now, we are giving City OR Multiple postal code
+
+
+
+
+Recurring Payment
+1. Packages will be renewed after limit point (Limit point should be dynamic and controlled by Admin)
+2. Only Admin can control, Partner recurring payment option.
+3. Recurring payment will only follow package pricing
+4. Partner can purchase custom points (we are not giving discount on custom points, it will follow basic package pricing rule)
+5. Partner can switch package easily.
+6. If Partner does not have enough points, Reminder Email notification will be sent to them to recharge.
