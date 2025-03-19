@@ -19,21 +19,17 @@ export const setTranslation = (locale: string) => {
 };
 
 export const trans = (key: string, replacement: { [key: string]: string } = {}): string => {
-
   const locale = localStorage.getItem('locale') || 'en';
   const translations = window.Laravel.translations[locale] as TranslationType<string>;
 
   let translation = translations[key] as string || key;
 
-  if (Object.keys(replacement).length > 0) {
-    Object.keys(replacement).forEach(element => {
-      translation = translation.replace(`:${element}`, replacement[element]);
-    });
+  for (const [element, value] of Object.entries(replacement)) {
+    translation = translation.replace(`:${element}`, value);
   }
 
   return translation;
 }
-
 
 export const __ = trans;
 

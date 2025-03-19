@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
 class LanguageController extends Controller
 {
+
     /**
      * Switch the application's locale.
      */
@@ -25,4 +25,6 @@ class LanguageController extends Controller
 
         return redirect()->back();
     }
+
+
 }

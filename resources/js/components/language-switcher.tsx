@@ -5,8 +5,9 @@ import { getLocales, setTranslation } from '@/lib/translations';
 import { SubNavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { ChevronsUpDown } from 'lucide-react';
+import { createElement } from 'react';
 
-export default function LanguageSwitcher(props: SubNavItem) {
+export default function LanguageSwitcher({title, icon}: SubNavItem) {
 
   const locales = getLocales();
   const { state } = useSidebar();
@@ -16,13 +17,9 @@ export default function LanguageSwitcher(props: SubNavItem) {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <SidebarMenuButton size="lg" className="pl-3 text-sidebar-accent-foreground data-[state=open]:bg-sidebar-accent group">
-          {
-            props.icon ? (
-              <props.icon className='pr-1' />
-            ) : ''
-          }
+          { icon ? createElement(icon, { className: 'pr-1' }) : '' }
           <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-medium">{props.title}</span>
+            <span className="truncate font-medium">{title}</span>
           </div>
             <ChevronsUpDown className="ml-auto size-4" />
           </SidebarMenuButton>
