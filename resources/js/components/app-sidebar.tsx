@@ -15,6 +15,11 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
+        title: 'Language',
+        url: '/languages/list',
+        icon: LayoutGrid,
+    },
+    {
         title: 'Blogs',
         url: '/blogs',
         icon: BookOpen,

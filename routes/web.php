@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\Admin\LanguageController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,7 +15,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('dashboard');
     })->name('dashboard');
 
-    Route::get('language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');
+    Route::get('languages/list', [LanguageController::class, 'list'])->name('admin.language.list');
+    Route::get('languages/switch/{locale}', [LanguageController::class, 'switch'])->name('admin.language.switch');
     Route::resource('blogs', BlogController::class)->names('blog');
 });
 
